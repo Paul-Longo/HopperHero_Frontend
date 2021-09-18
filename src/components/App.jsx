@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import { Login } from './Users/login';
 import { Register } from './Users/register';
 import WodList from './Wod/WodList';
+import NavBar from './NavBar/navbar';
 
 class App extends Component {
     state = {
@@ -27,7 +28,7 @@ class App extends Component {
         return (
             
             <div>
-                <h1>Hopper Hero</h1>
+                <NavBar /> <br />
                 <Login /> <br />
                 <Register />
                 <WodList wod={this.state.wod} />
