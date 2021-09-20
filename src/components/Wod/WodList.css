@@ -1,0 +1,38 @@
+.wod-list {
+        border-collapse: collapse;
+        margin:25px 0;
+        font-size: 0.9em;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        border: 1px solid black;
+        padding: 4px;
+        text-align: left;
+        margin-left: 0.5%;
+    }
+
+.header {
+    text-align: center; 
+}
+.wod-list__name {
+    background-color: lightgray;
+    border-collapse: collapse;
+    margin:25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid black;
+    padding: 7px;
+    text-align: left;
+}
+
+.wod-list__description {
+    background-color: white;
+    border-collapse: collapse;
+    margin:25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid black;
+    padding: 4px;
+    text-align: left;
+}

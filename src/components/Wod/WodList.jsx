@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-
+import './WodList.css'
 
 class WodList extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class WodList extends Component {
     render() { 
         return (
             <div>
-                <h1>Hero Wods</h1>
+                <h1 className="header">Hero Wods</h1>
                 <table className='wod-list'>
                     <tr>
                         <th>Name</th>
