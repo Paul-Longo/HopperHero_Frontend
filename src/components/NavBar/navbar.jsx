@@ -1,39 +1,47 @@
-import React, { Component } from 'react';
-import { NavBarItems } from "./navbaritems";
-import { Button } from '../Button/button';
-import "./navbar.css";
+import React from 'react';
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink
+} from './navbaritems';
 
-class NavBar extends Component {
-    state = { clicked: false }
+const Navbar = () => {
+  return (
+    <>
+      <Nav>
+        <NavLink to='/'>
+          <h1 className="navbar-logo">Hopper Hero <i className='fas fa-dumbbell'></i></h1>
+        </NavLink>
+        <Bars />
+        <NavMenu>
 
-    handleClick = () => {
-        this.setState({clicked: !this.state.clicked})
-    }
+          <NavLink to='/Hopper' activeStyle>
+            Hopper
+          </NavLink>
 
-    render() { 
-        return ( 
-        <nav className='NavBar'>
-            <h1 className="navbar-logo">Hopper Hero <i className='fas fa-dumbbell'></i></h1>
-            
-            <div className="menu-icon" onClick={this.handleClick}>
-                <i className={this.state.clicked ? 'fas fa-times': 'fas fa-bars'}></i>
-            </div>
+          <NavLink to='/WodList' activeStyle>
+            Wod List
+          </NavLink>
+          
+          <NavLink to='/Graph' activeStyle>
+            Chart
+          </NavLink>
 
-            <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                {NavBarItems.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <a className={item.cName} href={item.url}>
-                            {item.title}
-                            </a>
-                        </li>
-                    )
-                })}        
-            </ul>
-            <Button>Sign Up</Button>
-        </nav> 
-        );
-    }
-}
- 
-export default NavBar;
+          <NavLink to='/Login' activeStyle>
+            Login
+          </NavLink>
+        </NavMenu>
+
+        <NavBtn>
+          <NavBtnLink to='/Register'>Register</NavBtnLink>
+        </NavBtn>
+
+      </Nav>
+    </>
+  );
+};
+
+export default Navbar;
