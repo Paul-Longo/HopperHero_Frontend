@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React, {Component} from 'react';
-import { Login } from './Users/login';
-import { Register } from './Users/register';
+import  Login  from './Users/login';
+import  Register  from './Users/register';
 import WodList from './Wod/WodList';
 import NavBar from './NavBar/navbar';
+import Graph from './Chart/bar';
+import Home from './Home/Home';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends Component {
     state = {
@@ -23,17 +26,30 @@ class App extends Component {
         });
     }
 
+    createUser = (newUser) => {
+        this.state.users.push(newUser);
+        axios.post ('http://127.0.0.1:8000/api/auth/register/', newUser)
+            .then(response => this.setState = ({
+                newUser: response.data
+            }));
+        window.location.reload();
+    }
+
 
     render() { 
         return (
-            
             <div>
-                <NavBar /> <br />
-                <Login /> <br />
-                <Register />
-                <WodList wod={this.state.wod} />
+                <BrowserRouter>
+                   <NavBar />
+                    <Switch className={App}>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/Graph" component={Graph} />
+                        <Route exact path='/Login' component={Login} />
+                        <Route exact path='/Register' component={Register} />
+                        <Route exact path='/WodList' component={WodList} />
+                    </Switch>
+                </BrowserRouter>
             </div>
-            
         );
     }
 }
