@@ -36,7 +36,7 @@ class Hopper extends Component {
                             <td className='hopper__description'>{wod.description}</td>
                         </tr>)}
                 </table>
-                <button className="btn" onClick={this.state.wod}>LETS GO!</button>
+                <button className="btn" onClick={this.handlClick.bind(this)}>LETS GO!</button>
             </div>
         )
     }
