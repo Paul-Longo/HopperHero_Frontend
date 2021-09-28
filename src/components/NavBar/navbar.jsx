@@ -18,19 +18,19 @@ const Navbar = () => {
         <Bars />
         <NavMenu>
 
-          <NavLink to='/Hopper' activeStyle>
+          <NavLink to='/Hopper'>
             Hopper
           </NavLink>
 
-          <NavLink to='/WodList' activeStyle>
+          <NavLink to='/WodList'>
             Wod List
           </NavLink>
           
-          <NavLink to='/Graph' activeStyle>
+          <NavLink to='/Chart'>
             Chart
           </NavLink>
 
-          <NavLink to='/Login' activeStyle>
+          <NavLink to='/Login'>
             Login
           </NavLink>
         </NavMenu>
