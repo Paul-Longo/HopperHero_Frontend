@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./Hopper.css";
-import GetWod from "./GetWod"
+import GetWod from "./GetWod";
+import { Button, Table } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.css';
 
 let wod = []
 
@@ -46,7 +48,7 @@ class Hopper extends Component {
             return (
                 <div>
                     <h1 className="header">Random Wods</h1>
-                    <table className='hopper'>
+                    <Table className='hopper'>
                         <thead>
                         <tr>
                             <th>Name</th>
@@ -58,13 +60,13 @@ class Hopper extends Component {
                             <GetWod key={i} wod={wod}/>
                         ))}
                         </tbody>
-                    </table>
-                    <center><button className="btn" onClick={() => this.handleClick()}>LETS GO!</button></center>
+                    </Table>
+                    <center><Button className="btn" onClick={() => this.handleClick()}>LETS GO!</Button></center>
                 </div>
             )
         }
         else{
-            return(<div><center><button className="btn" onClick={() => this.handleClick()}>LETS GO!</button></center></div>)
+            return(<div><center><Button className="btn" onClick={() => this.handleClick()}>LETS GO!</Button></center></div>)
            
         }
     }
