@@ -53,8 +53,8 @@ class Chart extends Component {
             <div className='graph'>
                 <Bar
                 data={this.state.chartData}
-                width={5}
-                height={5}
+                width='35%'
+                height='15%'
                 options={{
                     title:{
                         display: this.props.displayTitle,
