@@ -30,15 +30,15 @@ const Login = () => {
     }
 
     if (redirect) {
-        return <Redirect to='/home'/>
+        return <Redirect to='/woddiary'/>
     }
 
   return (
 
     <Container>
-      <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
+      <div className="row">
+          <div className="col-md-3"></div>
+          <div className="col-md-6">
 
 
           <Form onSubmit={submit}>
@@ -53,10 +53,7 @@ const Login = () => {
             
             <Button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</Button>
           </Form>
-
-
           </div>
-          <div class="col-md-3"></div>
       </div>
     </Container>
   )
