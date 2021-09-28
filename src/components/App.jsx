@@ -6,15 +6,14 @@ import NavBar from './NavBar/navbar';
 import Chart from './Chart/bar';
 import Home from './Home/Home';
 import Hopper from './Hopper/Hopper';
-import Profile from './Profile/Profile';
 import "./App.css"
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import WodDiary from './WodDiary/woddiary';
 
 class App extends Component {
     state = {
             wod: [],
         }
-
 
     render() { 
         return (
@@ -29,7 +28,7 @@ class App extends Component {
                         <Route exact path='/Register' component={Register} />
                         <Route exact path='/WodList' component={WodList} />
                         <Route exact path='/Hopper' component={Hopper} />
-                        <Route exact path='/Profile' component={Profile} />
+                        <Route exact path='/WodDiary' component={WodDiary}/>
                     </Switch>
                 </BrowserRouter>
             </div>
