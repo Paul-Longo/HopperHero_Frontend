@@ -8,8 +8,12 @@ class GetWod extends Component {
     render() {
             return (
                 <tr>
-                    <td>Name:   {this.props.wod.name}</td>
-                    <td>Description:  {this.props.wod.description}</td>
+                    <td>Name: <br />   
+                        {this.props.wod.name}
+                    </td>
+                    <td>Description: <br />  
+                        {this.props.wod.description}
+                    </td>
                 </tr>
             );
     }
