@@ -1,4 +1,6 @@
-.btn{
+button{
     align-items: center;
+    outline: rgb(32, 99, 255);
+    margin-top: 10px;
 
 }
