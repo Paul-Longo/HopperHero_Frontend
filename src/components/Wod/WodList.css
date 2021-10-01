@@ -36,3 +36,8 @@
     padding: 4px;
     text-align: left;
 }
+
+.likes {
+    text-align: right;
+    padding-bottom: 10px ;
+}
