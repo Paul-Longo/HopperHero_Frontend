@@ -4,7 +4,7 @@ import { Button, Form, Container } from 'react-bootstrap'
 import { Redirect } from 'react-router-dom';
 
 
-const Login = () => {
+const Login = (user) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [redirect, setRedirect] = useState(false)
@@ -18,6 +18,7 @@ const Login = () => {
       password,
     }).then((response) => {
       localStorage.setItem('token', response.data.access)
+      localStorage.getItem('token')
       window.location.reload()
     }, (err) => {
       console.log(err)
