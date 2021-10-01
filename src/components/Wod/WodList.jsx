@@ -1,12 +1,14 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import './WodList.css'
+import './WodList.css';
+import WodListItems from './WodListItems';
+import { Button } from 'react-bootstrap';
 
 class WodList extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            wod: []
+            wod: [],
         }
     }
 
@@ -21,21 +23,21 @@ class WodList extends Component {
         });
     }
 
-    render() { 
+    render() {
         return (
             <div>
                 <h1 className="header">Hero Wods</h1>
+                <Button className='likes' to='src/components/Favorites/likespage.jsx' >Likes</Button>
                 <table className='wod-list'>
                     <tr>
                         <th>Name</th>
                         <th>Description</th>
                     </tr>
                     {this.state.wod.map((wod, index)=>
-                        <tr key={index}>
-                            <td className='wod-list__name'>{wod.name}</td>
-                            <td className='wod-list__description'>{wod.description}</td>
-                        </tr>)}
+                    <WodListItems wod={wod} index={index} />
+                        )}
                 </table>
+                
             </div>
         );
     }
