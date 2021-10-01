@@ -23,9 +23,9 @@ class WodListItems extends React.Component {
             <tr key={this.props.index}>
                 <td className='wod-list__name'>{this.props.wod.name}</td>
                 <td className='wod-list__description'>{this.props.wod.description}</td>
-                <button className="likebtn" onClick={this.toggleLike}>
+                <td><button className="likebtn" onClick={this.toggleLike}>
                     <i className="fas fa-heart fa-lg" style={{ color: changeColor }}></i>
-                </button>
+                </button></td>
             </tr>
         )
     }
