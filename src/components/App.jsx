@@ -10,6 +10,7 @@ import "./App.css"
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import WodDiary from './WodDiary/woddiary';
 
+
 class App extends Component {
     state = {
             wod: [],
@@ -28,7 +29,7 @@ class App extends Component {
                         <Route exact path='/Register' component={Register} />
                         <Route exact path='/WodList' component={WodList} />
                         <Route exact path='/Hopper' component={Hopper} />
-                        <Route exact path='/WodDiary' component={WodDiary}/>
+                        <Route exact path='/WodDiary' component={WodDiary} />
                     </Switch>
                 </BrowserRouter>
             </div>
