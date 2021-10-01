@@ -61,13 +61,13 @@ class Hopper extends Component {
                         ))}
                         </tbody>
                     </Table>
-                    <center><Button className="btn" onClick={() => this.handleClick()}>LETS GO!</Button></center>
+                    <center><Button className="btn" onClick={() => this.handleClick()}><img src="./images/hopperpic.png" alt="" /><br />Click Me!</Button></center>
+                    
                 </div>
             )
         }
         else{
-            return(<div><center><Button className="btn" onClick={() => this.handleClick()}>LETS GO!</Button></center></div>)
-           
+            return(<div><center><Button className="btn" onClick={() => this.handleClick()}><img src="./images/hopperpic.png" alt="" /></Button></center></div>)
         }
     }
 }
