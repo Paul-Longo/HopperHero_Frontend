@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Table } from "react-bootstrap";
+
 
 
 const WodDiary = ({ onCreateWod }) => {
@@ -19,15 +20,33 @@ const WodDiary = ({ onCreateWod }) => {
   };
 
 
+
+
   return (
-    <Form onSubmit={onSubmitHandler} className="createWod">
-        <center><h1>Wod Diary</h1>
-      <input type="text" placeholder="Wod Name" name="name" />
-      <input type="number" placeholder="Reps/Time" name="reps" />
-      <input type="date" name="date" />
-      <input type="comment" placeholder="Things to Improve" name="comment" />
-      <Button className="saveButton">Save</Button></center>
-    </Form>
+      <div>
+        <Form onSubmit={onSubmitHandler} className="createWod">
+            <center><h1>Wod Diary</h1>
+            <input type="text" placeholder="Wod Name" name="name" />
+            <input type="number/time" placeholder="Reps/Time" name="reps" />
+            <input type="date" name="date" />
+            <input type="comment" placeholder="Things to Improve" name="comment" />
+        <Button className="saveButton">Save</Button></center>
+        <Button className='likes' to='src/components/Favorites/likespage.jsx' >Likes</Button>
+        </Form>
+        <Table>
+            <thead>
+                <tr>
+                    <th>Wod Name</th>
+                    <th>Reps/Time</th>
+                    <th>Date</th>
+                    <th>This to Imporve</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </Table>
+    </div>
   );
 };
 
