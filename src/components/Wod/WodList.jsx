@@ -12,23 +12,25 @@ class WodList extends Component {
             user: this.props.user,
             likes: []
         }
+        this.getLikes();
+        this.getWod();
     }
 
-    componentDidMount() {
-        this.getWod();
-        this.getLikes();
-    }
+    // componentWillMount() {
+    //     this.getLikes();
+    //     this.getWod();
+    // }
 
     async getWod() {
         let response = await axios.get('http://127.0.0.1:8000/api/hopper/all')
-        this.setState({
+        await this.setState({
             wod: response.data
         });
     }
 
     async getLikes() {
         let response = await axios.get('http://127.0.0.1:8000/api/hopper/likes/user/' + this.state.user.id)
-        await this.setState({
+        this.setState({
            likes: response.data
         });
         console.log(this.state.likes)
@@ -38,7 +40,7 @@ class WodList extends Component {
         return (
             <div>
                 <h1 className="header">Hero Wods</h1>
-                <Button className='likes' to='src/components/Favorites/likespage.jsx' >Likes</Button>
+                <Button className='likes' to='/likes' >Likes</Button>
                 <table className='wod-list'>
                     <thead>
                     <tr>
@@ -48,11 +50,10 @@ class WodList extends Component {
                     </thead>
                     <tbody>
                     {this.state.wod.map((wod, index)=>
-                    <WodListItems wod={wod} key={index} />
+                    <WodListItems key={index} wod={wod} user={this.state.user} likes={this.state.likes}/>
                         )}
                     </tbody>
                 </table>
-                
             </div>
         );
     }
