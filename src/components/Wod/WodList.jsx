@@ -40,7 +40,7 @@ class WodList extends Component {
         return (
             <div>
                 <h1 className="header">Hero Wods</h1>
-                <Button className='likes' to='/likes' >Likes</Button>
+                {/* <Button className='likes' to='/likes' >Likes</Button> */}
                 <table className='wod-list'>
                     <thead>
                     <tr>
