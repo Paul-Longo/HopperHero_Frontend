@@ -1,8 +1,14 @@
-.img {
+.home {
+    padding-top: 50px;
+
+}
+
+.image {
     background-size: cover;
     opacity: 1;
-    height: 100%;
-    width: max-content;
+    height: 300px;
+    width: 350px;
     align-items: center;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
