@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Button, Form, Container } from 'react-bootstrap'
+import { Button, Form, Container } from 'react-bootstrap';
 import { Redirect } from 'react-router';
 
 
